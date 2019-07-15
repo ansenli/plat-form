@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 4</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="手机号登录" transform="translate(-549.000000, -342.000000)">
+            <g id="Group-10-Copy">
+                <g id="Group-22" transform="translate(13.000000, 13.000000)">
+                    <g id="验证码" transform="translate(520.000000, 319.000000)">
+                        <g id="password-copy" transform="translate(16.000000, 10.000000)">
+                            <g id="验证码icon">
+                                <g id="Group-4">
+                                    <rect id="Rectangle-6" stroke="#8C9099" stroke-width="1.5" x="2.75" y="4.75" width="14.5" height="11.5" rx="2"></rect>
+                                    <circle id="Oval" fill="#8C9099" cx="6" cy="10" r="1"></circle>
+                                    <circle id="Oval" fill="#8C9099" cx="10" cy="10" r="1"></circle>
+                                    <circle id="Oval" fill="#8C9099" cx="14" cy="10" r="1"></circle>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
