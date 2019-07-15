@@ -1,11 +1,11 @@
 <template>
-  <div></div>
+  <div>interfaceManage</div>
 </template>
 <script>
 export default {
   components: {
   },
-  name: 'interfaceManage',
+  name: 'InterfaceManage',
   watch: {
   },
   inject: ['reload'],

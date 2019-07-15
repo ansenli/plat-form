@@ -1,11 +1,11 @@
 <template>
-  <div></div>
+  <div>developerInformation</div>
 </template>
 <script>
 export default {
   components: {
   },
-  name: 'developerInformation',
+  name: 'DeveloperInformation',
   watch: {
   },
   inject: ['reload'],

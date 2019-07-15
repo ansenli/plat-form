@@ -28,8 +28,11 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" rel="stylesheet/scss" scoped>
 .container {
+  background: #fff;
+  min-height: calc((100vh - 40pt) - 88px);
   &-content {
     padding: 0px;
+    line-height: 90px;
   }
 }
 </style>

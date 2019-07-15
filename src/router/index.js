@@ -105,41 +105,86 @@ export const router = new Router({
             }
           ]
         },
+        // { // 接口对接模块
+        //   path: 'myOrder',
+        //   name: 'MyOrder',
+        //   component: () => import('@/views/myOrder/MyOrder'),
+        //   meta: { title: '接口对接', icon: '', keepAlive: true },
+        //   childrenShow: true,
+        //   children: [
+        //     {
+        //       path: 'all',
+        //       name: 'all',
+        //       component: () => import('@/views/myOrder/MyOrder'),
+        //       meta: { title: '开发者信息', icon: '', keepAlive: true }
+        //     },
+        //     {
+        //       path: 'unanswered',
+        //       name: 'unanswered',
+        //       component: () => import('@/views/myOrder/MyOrder'),
+        //       meta: { title: '接口管理', icon: '', keepAlive: true }
+        //     },
+        //     {
+        //       path: 'transport',
+        //       name: 'transport',
+        //       component: () => import('@/views/myOrder/MyOrder'),
+        //       meta: { title: '我的电子面单', icon: '', keepAlive: true }
+        //     },
+        //     {
+        //       path: 'haveSignedIn',
+        //       name: 'haveSignedIn',
+        //       component: () => import('@/views/myOrder/MyOrder'),
+        //       meta: { title: '在线API测试', icon: '', keepAlive: true }
+        //     },
+        //     {
+        //       path: 'others',
+        //       name: 'others',
+        //       component: () => import('@/views/myOrder/MyOrder'),
+        //       meta: { title: 'API测试进度', icon: '', keepAlive: true }
+        //     }
+        //   ]
+        // },
+        // 接口对接：linkInterFace
+        // 开发者信息：developerInformation
+        // 接口管理：interfaceManage
+        // 我的电子面单：myElectronicList
+        // 在线API测试：onlineApiTesting
+        // API测试进度：ApiTestProgress
         { // 接口对接模块
-          path: 'myOrder',
-          name: 'MyOrder',
-          component: () => import('@/views/myOrder/MyOrder'),
+          path: 'linkInterFace',
+          name: 'LinkInterFace',
+          component: () => import('@/views/linkInterFace/LinkInterFace'),
           meta: { title: '接口对接', icon: '', keepAlive: true },
           childrenShow: true,
           children: [
             {
-              path: 'all',
-              name: 'all',
-              component: () => import('@/views/myOrder/MyOrder'),
+              path: 'developerInformation',
+              name: 'DeveloperInformation',
+              component: () => import('@/views/linkInterFace/DeveloperInformation'),
               meta: { title: '开发者信息', icon: '', keepAlive: true }
             },
             {
-              path: 'unanswered',
-              name: 'unanswered',
-              component: () => import('@/views/myOrder/MyOrder'),
+              path: 'interfaceManage',
+              name: 'InterfaceManage',
+              component: () => import('@/views/linkInterFace/InterfaceManage'),
               meta: { title: '接口管理', icon: '', keepAlive: true }
             },
             {
-              path: 'transport',
-              name: 'transport',
-              component: () => import('@/views/myOrder/MyOrder'),
+              path: 'myElectronicList',
+              name: 'MyElectronicList',
+              component: () => import('@/views/linkInterFace/MyElectronicList'),
               meta: { title: '我的电子面单', icon: '', keepAlive: true }
             },
             {
-              path: 'haveSignedIn',
-              name: 'haveSignedIn',
-              component: () => import('@/views/myOrder/MyOrder'),
+              path: 'onlineApiTesting',
+              name: 'OnlineApiTesting',
+              component: () => import('@/views/linkInterFace/OnlineApiTesting'),
               meta: { title: '在线API测试', icon: '', keepAlive: true }
             },
             {
-              path: 'others',
-              name: 'others',
-              component: () => import('@/views/myOrder/MyOrder'),
+              path: 'apiTestProgress',
+              name: 'ApiTestProgress',
+              component: () => import('@/views/linkInterFace/ApiTestProgress'),
               meta: { title: 'API测试进度', icon: '', keepAlive: true }
             }
           ]
@@ -189,31 +234,6 @@ export const router = new Router({
             }
           ]
         },
-        // 常见问题
-        // {
-        //   path: 'accountManage',
-        //   name: 'AccountManage',
-        //   component: () => import('@/views/accountManage/AccountManage'),
-        //   meta: { title: '常见问题', keepAlive: true },
-        //   hidden: false,
-        //   childrenShow: true,
-        //   children: [
-        //     {
-        //       path: 'basicMess',
-        //       name: 'BasicMess',
-        //       component: () =>
-        //         import('@/views/accountManage/basicMess/BasicMess'),
-        //       meta: { title: '常见问题' }
-        //     },
-        //     {
-        //       path: 'myMessages',
-        //       name: 'MyMessages',
-        //       component: () =>
-        //         import('@/views/accountManage/myMessages/MyMessages'),
-        //       meta: { title: '错误编码' }
-        //     }
-        //   ]
-        // },
         { // 常见问题配置
           path: 'commonProblems',
           name: 'CommonProblems',

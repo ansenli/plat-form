@@ -1,5 +1,5 @@
 <template>
-  <div></div>
+  <div>ApiTestProgress</div>
 </template>
 <script>
 export default {

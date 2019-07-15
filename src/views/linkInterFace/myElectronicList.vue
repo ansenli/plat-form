@@ -1,11 +1,11 @@
 <template>
-  <div></div>
+  <div>myElectronicList</div>
 </template>
 <script>
 export default {
   components: {
   },
-  name: 'myElectronicList',
+  name: 'MyElectronicList',
   watch: {
   },
   inject: ['reload'],

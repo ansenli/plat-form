@@ -1,11 +1,11 @@
 <template>
-  <div></div>
+  <div>onlineApiTesting</div>
 </template>
 <script>
 export default {
   components: {
   },
-  name: 'onlineApiTesting',
+  name: 'OnlineApiTesting',
   watch: {
   },
   inject: ['reload'],
