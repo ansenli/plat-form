@@ -15,14 +15,29 @@
         :style="{width:menuLength,textAlign:'center'}"
       >
         <template slot="title">{{item.meta.title}}</template>
-        <!--<el-menu-item slot="title" :index="'/' + item.path">{{item.meta.title}}</el-menu-item>-->
         <template v-for="(itemC,indexC) in item.children">
           <el-menu-item
             @click="tracking(item,itemC)"
-            v-if="!itemC.hidden"
+            v-if="!itemC.hidden && item.childrenShow && !itemC.childrenShow"
             :index="'/' + item.path + '/' + itemC.path"
             :key="indexC"
           >{{itemC.meta.title}}</el-menu-item>
+          <!-- 新增多级导航菜单 -->
+          <el-submenu
+            id="mutilId"
+            @click="tracking(item,itemC)"
+            v-if="!itemC.hidden && item.childrenShow && itemC.childrenShow"
+            :index="'/' + item.path + '/' + itemC.path"
+            :key="indexC"
+          >
+            <template slot="title">{{itemC.meta.title}}</template>
+            <template v-for="(subItemC,subIndexC) in itemC.children">
+              <el-menu-item
+                :key="subIndexC"
+                :index="'/' + item.path + '/' + itemC.path + '/' + subItemC.path"
+              >{{subItemC.meta.title}}</el-menu-item>
+            </template>
+          </el-submenu>
         </template>
       </el-submenu>
       <el-menu-item
@@ -55,6 +70,7 @@ export default {
     },
     routes() {
       let routes = this.$router.options.routes;
+      console.log('routes......', routes);
       // 这里登录后更加用户权限判断是否需要展示对应的模块
       for (let i = 0; i < routes.length; i++) {
         if (!routes[i].hidden) {
@@ -86,36 +102,26 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" rel="stylesheet/scss" scoped>
-// .yto-aside {
-//   transition: width 0.3s;
-//   overflow: hidden;
-//   background: #0d2147;
-//   .el-menu {
-//     border-right: none;
-//   }
-// }
-// .logo {
-//   height: 50px;
-//   line-height: 50px;
-//   font-size: 20px;
-//   text-align: left;
-//   color: #fff;
-//   padding-left: 12px;
-//   margin-bottom: 20px;
-//   overflow: hidden;
-//   .logoIcon {
-//     font-size: 34px;
-//     vertical-align: middle;
-//   }
-// }
-// .icon {
-//   display: inline-block;
-//   vertical-align: middle !important;
-//   font-size: 16px;
-// }
-
 .title {
   padding: 0 10px;
   font-size: 16px;
+}
+
+#mutilId {
+  padding: 7.5px 0px !important;
+  margin: 0 20px;
+  color: #909399 !important;
+  &:hover {
+    color: #303133 !important;
+    background: #e5e9f2 !important;
+    outline: none !important;
+  }
+}
+/deep/ {
+  .el-submenu__title:hover {
+    color: #303133 !important;
+    background: #e5e9f2 !important;
+    outline: none !important;
+  }
 }
 </style>

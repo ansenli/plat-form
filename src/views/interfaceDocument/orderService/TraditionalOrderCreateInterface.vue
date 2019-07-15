@@ -1,14 +1,11 @@
 <template>
-  <div>
-    OrderService:
-    <router-view></router-view>
-  </div>
+  <div>TraditionalOrderCreateInterface</div>
 </template>
 <script>
 export default {
   components: {
   },
-  name: 'OrderService',
+  name: 'TraditionalOrderCreateInterface',
   watch: {
   },
   inject: ['reload'],

@@ -1,11 +1,11 @@
 <template>
-  <div></div>
+  <div>QueryService</div>
 </template>
 <script>
 export default {
   components: {
   },
-  name: 'queryService',
+  name: 'QueryService',
   watch: {
   },
   inject: ['reload'],

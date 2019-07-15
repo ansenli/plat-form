@@ -66,7 +66,7 @@ export const router = new Router({
           path: 'MyOrderCheck',
           name: 'MyOrderCheck',
           component: () => import('@/views/myOrder/MyOrderCheck'),
-          hidden: true,
+          hidden: false,
           meta: { title: '接口审核', icon: '', keepAlive: true },
           childrenShow: true,
           children: [
@@ -89,6 +89,7 @@ export const router = new Router({
           name: 'MyOrderSystem',
           component: () => import('@/views/myOrder/MyOrderSystem'),
           meta: { title: '后台管理', icon: '', keepAlive: true },
+          hidden: false,
           childrenShow: true,
           children: [
             {
@@ -105,51 +106,6 @@ export const router = new Router({
             }
           ]
         },
-        // { // 接口对接模块
-        //   path: 'myOrder',
-        //   name: 'MyOrder',
-        //   component: () => import('@/views/myOrder/MyOrder'),
-        //   meta: { title: '接口对接', icon: '', keepAlive: true },
-        //   childrenShow: true,
-        //   children: [
-        //     {
-        //       path: 'all',
-        //       name: 'all',
-        //       component: () => import('@/views/myOrder/MyOrder'),
-        //       meta: { title: '开发者信息', icon: '', keepAlive: true }
-        //     },
-        //     {
-        //       path: 'unanswered',
-        //       name: 'unanswered',
-        //       component: () => import('@/views/myOrder/MyOrder'),
-        //       meta: { title: '接口管理', icon: '', keepAlive: true }
-        //     },
-        //     {
-        //       path: 'transport',
-        //       name: 'transport',
-        //       component: () => import('@/views/myOrder/MyOrder'),
-        //       meta: { title: '我的电子面单', icon: '', keepAlive: true }
-        //     },
-        //     {
-        //       path: 'haveSignedIn',
-        //       name: 'haveSignedIn',
-        //       component: () => import('@/views/myOrder/MyOrder'),
-        //       meta: { title: '在线API测试', icon: '', keepAlive: true }
-        //     },
-        //     {
-        //       path: 'others',
-        //       name: 'others',
-        //       component: () => import('@/views/myOrder/MyOrder'),
-        //       meta: { title: 'API测试进度', icon: '', keepAlive: true }
-        //     }
-        //   ]
-        // },
-        // 接口对接：linkInterFace
-        // 开发者信息：developerInformation
-        // 接口管理：interfaceManage
-        // 我的电子面单：myElectronicList
-        // 在线API测试：onlineApiTesting
-        // API测试进度：ApiTestProgress
         { // 接口对接模块
           path: 'linkInterFace',
           name: 'LinkInterFace',
@@ -190,46 +146,67 @@ export const router = new Router({
           ]
         },
         { // 接口文档模块
-          path: 'MyOrderOther',
-          name: 'MyOrderOther',
-          component: () => import('@/views/myOrder/MyOrderOther'),
+          path: 'interfaceDocument',
+          name: 'InterfaceDocument',
+          component: () => import('@/views/interfaceDocument/InterfaceDocument'),
           meta: { title: '接口文档', icon: '', keepAlive: true },
           childrenShow: true,
           children: [
             {
-              path: 'all',
-              name: 'all',
-              component: () => import('@/views/myOrder/MyOrderOther'),
+              path: 'platformIntroduction',
+              name: 'PlatformIntroduction',
+              component: () => import('@/views/interfaceDocument/PlatformIntroduction'),
               meta: { title: '平台介绍', icon: '', keepAlive: true }
             },
             {
-              path: 'unanswered',
-              name: 'unanswered',
-              component: () => import('@/views/myOrder/MyOrderOther'),
-              meta: { title: '订单服务', icon: '', keepAlive: true }
+              path: 'orderService',
+              name: 'OrderService',
+              component: () => import('@/views/interfaceDocument/OrderService'),
+              meta: { title: '订单服务', icon: '', keepAlive: true },
+              childrenShow: true,
+              children: [
+                {
+                  path: 'traditionalOrderCreateInterface',
+                  name: 'TraditionalOrderCreateInterface',
+                  component: () => import('@/views/interfaceDocument/orderService/TraditionalOrderCreateInterface'),
+                  meta: { title: '传统订单创建接口', icon: '', keepAlive: true }
+                },
+                {
+                  path: 'traditionalOrderCancelInterface',
+                  name: 'TraditionalOrderCancelInterface',
+                  component: () => import('@/views/interfaceDocument/orderService/TraditionalOrderCancelInterface'),
+                  meta: { title: '传统订单取消接口', icon: '', keepAlive: true }
+                },
+                {
+                  path: 'bnetTraditionalOrderInterface',
+                  name: 'BnetTraditionalOrderInterface',
+                  component: () => import('@/views/interfaceDocument/orderService/BnetTraditionalOrderInterface'),
+                  meta: { title: 'B网传统订单接口', icon: '', keepAlive: true }
+                }
+              ]
             },
             {
-              path: 'transport',
-              name: 'transport',
-              component: () => import('@/views/myOrder/MyOrderOther'),
+              path: 'queryService',
+              name: 'QueryService',
+              component: () => import('@/views/interfaceDocument/QueryService'),
               meta: { title: '查询服务', icon: '', keepAlive: true }
             },
             {
-              path: 'haveSignedIn',
-              name: 'haveSignedIn',
-              component: () => import('@/views/myOrder/MyOrderOther'),
+              path: 'logisticsInformationService',
+              name: 'LogisticsInformationService',
+              component: () => import('@/views/interfaceDocument/LogisticsInformationService'),
               meta: { title: '物流信息服务', icon: '', keepAlive: true }
             },
             {
-              path: 'others',
-              name: 'others',
-              component: () => import('@/views/myOrder/MyOrderOther'),
+              path: 'electronicSingleFaceService',
+              name: 'ElectronicSingleFaceService',
+              component: () => import('@/views/interfaceDocument/ElectronicSingleFaceService'),
               meta: { title: '电子面单服务', icon: '', keepAlive: true }
             },
             {
-              path: 'others',
-              name: 'others',
-              component: () => import('@/views/myOrder/MyOrderOther'),
+              path: 'warehouseService',
+              name: 'WarehouseService',
+              component: () => import('@/views/interfaceDocument/WarehouseService'),
               meta: { title: '仓配服务', icon: '', keepAlive: true }
             }
           ]
@@ -275,6 +252,7 @@ const whiteList = [
   '/news/newsDetail/:id'
 ]; // no redirect whitelist
 router.beforeEach((to, from, next) => {
+  console.log('beforerout....');
   let token = Cookies.get('jwt-token');
   if (!token) {
     removeStore('userInfo');

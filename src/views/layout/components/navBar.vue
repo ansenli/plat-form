@@ -27,11 +27,6 @@
         </div>
       </div>
     </el-col>
-    <!--<el-col :span="1">-->
-    <!--<div class="logout" @click="logout">-->
-    <!--<svg-icon icon-class="logout" class="icon"></svg-icon>-->
-    <!--</div>-->
-    <!--</el-col>-->
   </el-row>
 </template>
 

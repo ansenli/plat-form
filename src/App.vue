@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
@@ -20,7 +20,7 @@ export default {
         let location = window.location;
         let contentUrl = location.pathname + location.hash;
         let refererUrl = getStore('previous_page_url') || '/';
-        console.log('refererUrl=' + refererUrl);
+        // console.log('refererUrl=' + refererUrl);
         window._czc.push(['_trackPageview', contentUrl, refererUrl]);
       }
     }

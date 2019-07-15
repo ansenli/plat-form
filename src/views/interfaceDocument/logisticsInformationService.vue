@@ -1,11 +1,11 @@
 <template>
-  <div></div>
+  <div>LogisticsInformationService</div>
 </template>
 <script>
 export default {
   components: {
   },
-  name: 'logisticsInformationService',
+  name: 'LogisticsInformationService',
   watch: {
   },
   inject: ['reload'],

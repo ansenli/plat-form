@@ -1,11 +1,11 @@
 <template>
-  <div></div>
+  <div>ElectronicSingleFaceService</div>
 </template>
 <script>
 export default {
   components: {
   },
-  name: 'electronicSingleFaceService',
+  name: 'ElectronicSingleFaceService',
   watch: {
   },
   inject: ['reload'],

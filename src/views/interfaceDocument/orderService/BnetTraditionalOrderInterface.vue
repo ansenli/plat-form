@@ -1,14 +1,11 @@
 <template>
-  <div>
-    OrderService:
-    <router-view></router-view>
-  </div>
+  <div>BnetTraditionalOrderInterface</div>
 </template>
 <script>
 export default {
   components: {
   },
-  name: 'OrderService',
+  name: 'BnetTraditionalOrderInterface',
   watch: {
   },
   inject: ['reload'],

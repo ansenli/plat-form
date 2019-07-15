@@ -1,11 +1,11 @@
 <template>
-  <div></div>
+  <div>WarehouseService</div>
 </template>
 <script>
 export default {
   components: {
   },
-  name: 'warehouseService',
+  name: 'WarehouseService',
   watch: {
   },
   inject: ['reload'],

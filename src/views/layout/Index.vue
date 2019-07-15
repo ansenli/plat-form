@@ -8,8 +8,6 @@
           </el-col>
         </el-row>
       </el-header>
-      <!-- <tagsView></tagsView> -->
-
       <el-scrollbar style="height: calc(100vh - 80px);background:#fff;" wrapClass="yto-x-auto">
         <el-main>
           <el-row type="flex" class="row-bg" justify="center">

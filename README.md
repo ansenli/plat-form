@@ -47,6 +47,9 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 接口文档：interfaceDocument
   平台介绍：platformIntroduction
   订单服务：orderService
+    传统订单创建接口：traditionalOrderCreateInterface
+    传统订单取消接口：traditionalOrderCancelInterface
+    B网传统订单接口：bnetTraditionalOrderInterface
   查询服务：queryService
   物流信息服务：logisticsInformationService
   电子面单服务： electronicSingleFaceService
